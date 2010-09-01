@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using nothinbutdotnetstore.model;
+using nothinbutdotnetstore.stubs;
 using nothinbutdotnetstore.web.core;
 
 namespace nothinbutdotnetstore.web.application.catalogbrowsing

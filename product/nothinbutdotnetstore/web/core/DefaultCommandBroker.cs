@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
-using nothinbutdotnetstore.web.stubs;
+using nothinbutdotnetstore.stubs;
 
 namespace nothinbutdotnetstore.web.core
 {

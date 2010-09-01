@@ -1,8 +1,7 @@
-using System;
-using System.Collections.Generic;
-using nothinbutdotnetstore.web.stubs;
+﻿using System.Collections.Generic;
+using nothinbutdotnetstore.model;
 
-namespace nothinbutdotnetstore.model
+namespace nothinbutdotnetstore.stubs
 {
     public class StubDepartmentRepository : DepartmentRepository
     {

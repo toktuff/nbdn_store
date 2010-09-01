@@ -1,10 +1,9 @@
-using System.Collections.Generic;
-using nothinbutdotnetstore.model;
+﻿using nothinbutdotnetstore.model;
 using nothinbutdotnetstore.web.application.catalogbrowsing;
 using nothinbutdotnetstore.web.asp;
 using nothinbutdotnetstore.web.core;
 
-namespace nothinbutdotnetstore.web.stubs
+namespace nothinbutdotnetstore.stubs
 {
     public static class StubData
     {

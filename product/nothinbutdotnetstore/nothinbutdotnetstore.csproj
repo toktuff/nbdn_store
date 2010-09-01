@@ -67,7 +67,8 @@
   <ItemGroup>
     <Compile Include="model\Department.cs" />
     <Compile Include="model\DepartmentRepository.cs" />
-    <Compile Include="model\StubDepartmentRepository.cs" />
+    <Compile Include="stubs\StubData.cs" />
+    <Compile Include="stubs\StubDepartmentRepository.cs" />
     <Compile Include="web\application\catalogbrowsing\ViewMainDepartments.cs" />
     <Compile Include="web\application\catalogbrowsing\ViewMainDepartmentsResult.cs" />
     <Compile Include="web\asp\AspApplicationView.cs" />
@@ -91,7 +92,6 @@
     <Compile Include="web\core\RequestFactory.cs" />
     <Compile Include="web\core\CommandResult.cs" />
     <Compile Include="web\core\ViewBroker.cs" />
-    <Compile Include="web\stubs\StubData.cs" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
