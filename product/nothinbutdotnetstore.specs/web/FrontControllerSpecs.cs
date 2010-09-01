@@ -20,6 +20,7 @@ namespace nothinbutdotnetstore.specs.web
              Establish c = () =>
              {
                  command_broker = the_dependency<CommandBroker>();
+                 view_broker = the_dependency<ViewBroker>();
                  request = an<Request>();
                  command = an<RequestCommand>();
 
@@ -29,13 +30,17 @@ namespace nothinbutdotnetstore.specs.web
              Because b = () =>
                  sut.process(request);
 
-
              It should_delegate_the_processing_to_the_command_that_can_process_the_request = () =>
                  command.received(x => x.process(request));
+
+             It should_delegate_rendering_view_registry = () =>
+                 view_broker.received(x => x.render_results(request));
+
 
              static RequestCommand command;
              static Request request;
              static CommandBroker command_broker;
+             static ViewBroker view_broker;
          }
      }
  }

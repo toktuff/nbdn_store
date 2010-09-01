@@ -1,4 +1,7 @@
 using System.Web;
+using System.Web.Compilation;
+using System.Web.UI;
+using nothinbutdotnetstore.web.asp;
 
 namespace nothinbutdotnetstore.web.core
 {
@@ -6,6 +9,12 @@ namespace nothinbutdotnetstore.web.core
     {
         RequestFactory request_factory;
         FrontController front_controller;
+
+        public ControllerDispatcher()
+            :this(new AspRequestFactory(), new DefaultFrontController())
+        {
+            
+        }
 
         public ControllerDispatcher(RequestFactory request_factory, FrontController front_controller)
         {

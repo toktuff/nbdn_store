@@ -1,11 +1,17 @@
 using System.Collections.Generic;
 using System.Linq;
+using nothinbutdotnetstore.web.stubs;
 
 namespace nothinbutdotnetstore.web.core
 {
     public class DefaultCommandBroker : CommandBroker
     {
         IEnumerable<RequestCommand> all_commands;
+
+        public DefaultCommandBroker() : this(StubData.commands)
+        {
+            
+        }
 
         public DefaultCommandBroker(IEnumerable<RequestCommand> all_commands)
         {
