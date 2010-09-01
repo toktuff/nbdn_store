@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using nothinbutdotnetstore.model;
+using nothinbutdotnetstore.model.stub;
 using nothinbutdotnetstore.stubs;
 using nothinbutdotnetstore.web.core;
 

@@ -67,8 +67,8 @@
   <ItemGroup>
     <Compile Include="model\Department.cs" />
     <Compile Include="model\DepartmentRepository.cs" />
+    <Compile Include="model\stub\StubDepartmentRepository.cs" />
     <Compile Include="stubs\StubData.cs" />
-    <Compile Include="stubs\StubDepartmentRepository.cs" />
     <Compile Include="web\application\catalogbrowsing\ViewMainDepartments.cs" />
     <Compile Include="web\application\catalogbrowsing\ViewMainDepartmentsResult.cs" />
     <Compile Include="web\asp\AspApplicationView.cs" />
