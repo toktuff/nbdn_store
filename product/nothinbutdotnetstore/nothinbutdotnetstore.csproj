@@ -66,6 +66,7 @@
     <Compile Include="tasks\CatalogBrowsingTasks.cs" />
     <Compile Include="tasks\stubs\StubCatalogBrowsingTasks.cs" />
     <Compile Include="web\application\catalogbrowsing\ViewSubDepartments.cs" />
+    <Compile Include="web\core\NullModel.cs" />
     <Compile Include="web\core\ProjectingCommand.cs" />
     <Compile Include="web\core\DefaultViewFor.cs">
       <SubType>ASPXCodeBehind</SubType>
