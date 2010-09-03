@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>9.0.30729</ProductVersion>
+    <ProductVersion>9.0.21022</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{922EF2FE-820B-4ED5-9D64-7D716E135719}</ProjectGuid>
     <OutputType>Library</OutputType>
@@ -61,6 +61,23 @@
     <Reference Include="System.Web" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="infrastructure\automapper\AutoMapperRegistry.cs" />
+    <Compile Include="infrastructure\automapper\DefaultGenericMapper.cs" />
+    <Compile Include="infrastructure\automapper\DefaultMappingSourceFactory.cs" />
+    <Compile Include="infrastructure\automapper\MappingSourceFactoryRegistry.cs" />
+    <Compile Include="infrastructure\automapper\NameValueCollectionMappingSource.cs" />
+    <Compile Include="infrastructure\automapper\ReflectiveMappingSource.cs" />
+    <Compile Include="infrastructure\automapper\DefaultMappingStep.cs" />
+    <Compile Include="infrastructure\automapper\DefaultMappingStrategy.cs" />
+    <Compile Include="infrastructure\automapper\GenericMapper.cs" />
+    <Compile Include="infrastructure\automapper\MappingSource.cs" />
+    <Compile Include="infrastructure\automapper\MappingSourceFactory.cs" />
+    <Compile Include="infrastructure\automapper\MappingStep.cs" />
+    <Compile Include="infrastructure\automapper\MappingStrategy.cs" />
+    <Compile Include="infrastructure\automapper\MappingTarget.cs" />
+    <Compile Include="infrastructure\automapper\MappingTargetBuilder.cs" />
+    <Compile Include="infrastructure\automapper\MappingTargetBuilderFactory.cs" />
+    <Compile Include="infrastructure\automapper\NamedValue.cs" />
     <Compile Include="infrastructure\ChainedCommand.cs" />
     <Compile Include="infrastructure\containers\basic\AutomaticDependencyResolver.cs" />
     <Compile Include="infrastructure\containers\basic\ConstructorSelectionStrategies.cs" />
