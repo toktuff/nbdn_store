@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Collections.Specialized;
 using nothinbutdotnetstore.infrastructure;
 using nothinbutdotnetstore.infrastructure.automapper;
+using nothinbutdotnetstore.infrastructure.containers;
 using nothinbutdotnetstore.model;
 using nothinbutdotnetstore.web;
 
@@ -19,6 +20,12 @@ namespace nothinbutdotnetstore.tasks.startup
 
         public void run()
         {
+            services.register_dependency_factory<GenericMapper>(() => new DefaultGenericMapper(
+                IOC.retrieve.an<MappingSourceFactory>(),
+                IOC.retrieve.an<MappingTargetBuilderFactory>(),
+                IOC.retrieve.an<MappingStep>()));
+            services.register_dependency_factory<MappingSourceFactory>(() => new DefaultMappingSourceFactory(
+                IOC.retrieve.an<IEnumerable<MappingSourceConfiguration>>()));
             services.register_dependency_factory<IEnumerable<MappingSourceConfiguration>>(get_configurations);
             services.register_dependency_factory<Mapper<NameValueCollection, Department>>(() => new DepartmentMapper());
         }
