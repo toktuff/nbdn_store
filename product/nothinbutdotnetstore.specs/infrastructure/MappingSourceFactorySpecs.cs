@@ -1,3 +1,5 @@
+ using System;
+ using System.Collections.Generic;
  using Machine.Specifications;
  using Machine.Specifications.DevelopWithPassion.Rhino;
  using nothinbutdotnetstore.infrastructure.automapper;
@@ -20,12 +22,14 @@ namespace nothinbutdotnetstore.specs.infrastructure
              Establish c = () =>
                  {
                      the_mapping_source = an<MappingSource>();
-                     factory = an<MappingSourceFactory>();
 
-                     registry = the_dependency<MappingSourceFactoryRegistry>();
+                     factory = o => the_mapping_source;
+                     configurations = new List<MappingSourceConfiguration>
+                                                                 {
+                                                                     new MappingSourceConfiguration(o => true, factory)
+                                                                 };
 
-                     registry.Stub(x => x.get_factory_for<int>()).Return(factory);
-                     factory.Stub(x => x.create_mapping_source_for(99)).Return(the_mapping_source);
+                     provide_a_basic_sut_constructor_argument(configurations);
                  };
 
              Because b = () =>
@@ -34,12 +38,13 @@ namespace nothinbutdotnetstore.specs.infrastructure
 
              It should_create_an_source_using_a_factory_retrieved_from_the_registry = () =>
                  result.ShouldEqual(the_mapping_source);
-                 
 
-             static MappingSourceFactoryRegistry registry;
+
+             static IEnumerable<MappingSourceConfiguration> configurations;
+
              static MappingSource result;
              static MappingSource the_mapping_source;
-             static MappingSourceFactory factory;
+             static Func<object, MappingSource> factory;
          }
      }
  }

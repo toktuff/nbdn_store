@@ -64,7 +64,8 @@
     <Compile Include="infrastructure\automapper\AutoMapperRegistry.cs" />
     <Compile Include="infrastructure\automapper\DefaultGenericMapper.cs" />
     <Compile Include="infrastructure\automapper\DefaultMappingSourceFactory.cs" />
-    <Compile Include="infrastructure\automapper\MappingSourceFactoryRegistry.cs" />
+    <Compile Include="infrastructure\automapper\MappingSourceCriteria.cs" />
+    <Compile Include="infrastructure\automapper\MappingSourceConfiguration.cs" />
     <Compile Include="infrastructure\automapper\NameValueCollectionMappingSource.cs" />
     <Compile Include="infrastructure\automapper\ReflectiveMappingSource.cs" />
     <Compile Include="infrastructure\automapper\DefaultMappingStep.cs" />
